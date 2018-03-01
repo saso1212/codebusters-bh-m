@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Museum Shop</title>
+    <link rel="stylesheet" type="text/css" href="jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+</head>
+
+<body>
+    <!-- <button id="p1">Click</button> -->
+    <div style="padding: 20px;">
+    <button id="clearLocal" >Clear Local Storage</button>
+</div>
+<div class="container-box">
+    <div class="wrapper">
+        
+        <div class="box a">A
+            <img src="pictures/vazna.png" alt="Close" border="0" style="max-width: 200px">
+        </div>
+        <div class="box b">B
+            <img src="pictures/random.jpg" alt="Close" border="0" style="max-width: 200px">
+        </div>
+        <div class="box c">C
+            <img src="pictures/random2.jpg" alt="Close" border="0" style="max-width: 200px">
+        </div>
+        <div class="box d">D
+            <img src="pictures/random3.jpg" alt="Close" border="0" style="max-width: 200px">
+        </div>
+        <div class="box e">E
+            <img src="pictures/random4.jpg" alt="Close" border="0" style="max-width: 200px">
+        </div>
+        <div class="box f">F
+            <img src="pictures/random5.jpg" alt="Close" border="0" style="max-width: 200px">
+        </div>
+    </div>
+    <div class="container-right">
+        <div class="box1" style="color:#fff;">
+            <div class="box-title">My Cart <button id="btnClose" class="btn-close">Close</button></div>
+        
+            <hr>
+            <div class="box2"></div>
+            <!-- <h3 class="description"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, laboriosam.</h3>
+            <br>
+            <p  style="padding:8px;"><span class="price">Price: 30$</span> <span class="quantity">Quanitity:1</span> </p> -->
+        </div>
+        <hr>
+        <br>
+        <div id="total-price" style="color:#fff;">
+                <!-- <p style="padding-left:10px;">Total Price: <span id="totoal-price"> 30$ </span></p> -->
+        </div>
+        <button class="btn" id="purche">Purche</button>
+        </div>
+    </div>
+    <div id="popup" style="width: 100%; height: 100%; left: 0px; top: 0px;">
+        <mktz-div id="mktz_container" style="z-index: 25111988; position: fixed; border-radius: 3px; left: 640px; top: 249.5px;">
+            <div class="mktz_close" style="z-index: 26112988; position: absolute; right: 0px; margin: -13px -15px -15px;" id="closeButton">
+                <a>
+                    <img src="pictures/close.png" alt="Close" border="0" style="max-width: 27px">
+                </a>
+            </div>
+            <link class="omni-font-tag" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+            <!-- Artboard 6 -->
+            <div data-tpl-element="creative" class="omni_template_6" style="position: relative; width: 640px; min-height: 450px;      background-color: #fff;">
+                <div data-lc-role="lead_page">
+                    <div class="omni_leftTemplate" id="LevaStrana" data-tpl-role="background" data-tpl-name="Background" data-tpl-meta-style-background-image="210x400"
+                        style="      background-color: #fff;      background-image: url('pictures/vazna.png');      background-repeat: no-repeat;      background-size: cover;      background-position: center center;"
+                        id="interaction-editor-1-alno-ee-0">
+
+
+
+                    </div>
+                    <!--      **Content for right side -->
+                    <div class="omni_rightTemplate" id="desnaStrana">
+                        <div class="omni_textRightTop" data-tpl-role="text" data-tpl-name="Text Right Top" id="TextRightTop">
+                            <div id="TextRightTopTitle">
+                                <h2 id="ProductTitle"></h2>
+                            </div>
+                        </div>
+                        <div class="omni_textRightTop" data-tpl-role="text" data-tpl-name="Text Right Middle" id="TextRightMiddle">
+                            <div id="TextRightMiddleDesc">
+                                <p id="ProductDescription"> </p>
+                            </div>
+                        </div>
+                        <div class="omni_textRightTop" data-tpl-role="text" data-tpl-name="Text Right Top" id="TextRightTop">
+                            <div id="TextRightTopTitle" style="padding-bottom: 20px;"> Price: <span id="ProductPrice">2.49</span>$  - Quantity:
+                                <button id="minus" name="minus">-</button>
+                                <input type="text" id="quantity" placeholder="1" readonly style="text-align:center; font-size: 15px; width: 40px;">
+                                <button id="plus" name="plus">+</button>
+                            </div>
+                        </div>
+                        <button class="omni_buttonSubmit" type="button" id="AddToCart" style=" background-color: gray; " >Add to Cart</button>
+                    </div>
+                </div>
+
+                <!--  Templates  -->
+                <div data-lc-role="lc_templates" data-tpl-role="templates" style="display:none;">
+                    <!--  Lead field Template    -->
+                    <div data-lc-role="lead_field_template" style="display:none;">
+                        <div class="omni_inputContainer" data-lc-role="field_template" style="margin-top: 0;">
+                            <input type="field_template" name="field_template" class="omni_leadInput" placeholder="Enter your email here"> </div>
+                    </div>
+                    <style type="text/css" media="screen">
+                        .omni_template_6 {
+                            display: block;
+                            height: auto;
+                            margin: 0 auto;
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            background-position: center center;
+                            position: relative;
+                            z-index: 1;
+                        }
+
+                        .omni_template_6 a {
+                            color: inherit;
+                            font-size: inherit;
+                            text-decoration: underline;
+                            cursor: pointer;
+                        }
+
+                        .omni_template_6 pre {
+                            white-space: pre-wrap;
+                            /* Since CSS 2.1 */
+                            white-space: -moz-pre-wrap;
+                            /* Mozilla, since 1999 */
+                            white-space: -pre-wrap;
+                            /* Opera 4-6 */
+                            white-space: -o-pre-wrap;
+                            /* Opera 7 */
+                            word-wrap: break-word;
+                            /* Internet Explorer 5.5+ */
+                        }
+
+                        .omni_leftTemplate {
+                            display: inline-block;
+                            padding: 20px;
+                            position: absolute;
+                            top: 0;
+                            bottom: 0;
+                            left: 0;
+                            width: 220px;
+                        }
+
+                        .omni_leftDisclaimer {
+                            position: absolute;
+                            left: 0;
+                            right: 0;
+                            margin: 0 auto;
+                            bottom: 20px;
+                            max-width: 200px;
+                        }
+
+                        .omni_rightTemplate {
+                            display: inline-block;
+                            padding: 80px 20px 60px 0;
+                            width: 380px;
+                            margin-left: 260px;
+                        }
+
+                        .omni_inputContainer {
+                            display: inline-block;
+                            width: 100%;
+                            margin: 30px 0 0;
+                            text-align: left;
+                        }
+
+                        .omnin_separator {
+                            display: inline-block;
+                            height: 1px;
+                            background: #4f6078;
+                            border: 0;
+                            border-top: 1px solid #4f6078;
+                            width: 100%;
+                            margin: 5px 0;
+                        }
+
+                        button.omni_buttonSubmit {
+                            display: block;
+                            width: 100%;
+                            max-width: 320px;
+                            min-height: 42px;
+                            margin: 0 auto;
+                            border-radius: 4px;
+                            background-image: none;
+                            border: none;
+                            text-shadow: none;
+                            color: #fff;
+                            font-family: sans-serif;
+                            font-size: 16px;
+                            font-weight: 400;
+                            padding: 0 20px;
+                            outline: none !important;
+                            -webkit-transition: all 0.3s ease-in;
+                            -moz-transition: all 0.3s ease-in;
+                            -o-transition: all 0.3s ease-in;
+                            transition: all 0.3s ease-in;
+                            text-decoration: none;
+                            text-align: center;
+                        }
+
+                        button.omni_buttonExit {
+                            display: inline-block;
+                            width: 100%;
+                            margin: 20px auto 50px;
+                            position: relative;
+                            font-family: 'Montserrat', sans-serif;
+                            font-size: 14px;
+                            font-weight: 100;
+                            line-height: 20px;
+                            text-decoration: underline;
+                            text-align: center;
+                            border: none;
+                            color: #787878;
+                        }
+
+                        /* Button resets  */
+
+                        button.omni_buttonSubmit:active,
+                        button.omni_buttonExit:active {
+                            box-shadow: none;
+                        }
+
+                        button.omni_buttonSubmit:hover,
+                        button.omni_buttonExit:hover {
+                            opacity: 1;
+                        }
+
+                        input.omni_leadInput {
+                            display: block;
+                            width: 320px;
+                            margin: 0 auto 10px;
+                            padding: 10px 20px;
+                            border-radius: 4px;
+                            border: 1px solid #d8d8d8;
+                            text-align: center;
+                            font-size: 16px;
+                            font-weight: 400;
+                            box-sizing: border-box !important;
+                        }
+
+                        /* Responsive template */
+
+                        @media screen and (max-width: 600px) {
+                            .omni_template_6 {
+                                width: 280px !important;
+                                height: auto;
+                            }
+                            .omni_leftTemplate {
+                                display: block;
+                                padding: 10px;
+                                background-size: 100% 100%;
+                                position: relative;
+                                top: auto;
+                                left: auto;
+                                width: auto;
+                            }
+                            .omni_leftDisclaimer {
+                                display: none;
+                            }
+                            .omni_textLeftTop1Container div {
+                                font-size: 26px !important;
+                            }
+                            .omni_textLeftTop2Container div {
+                                font-size: 30px !important;
+                            }
+                            .omni_textLeftMiddle1Container {
+                                margin-top: 10px !important;
+                            }
+                            .omni_textLeftMiddle1Container div {
+                                font-size: 20px !important;
+                            }
+                            .omni_textLeftMiddle2Container {
+                                margin-top: 10px !important;
+                            }
+                            .omni_textLeftMiddle2Container div {
+                                font-size: 35px !important;
+                                margin-bottom: 0 !important;
+                            }
+                            .omnin_separator {
+                                margin: 0 !important;
+                            }
+                            .omni_rightTemplate {
+                                display: block;
+                                padding: 20px;
+                                width: auto;
+                                margin-left: 0;
+                            }
+                            .omni_textRightTop div {
+                                font-size: 12px !important;
+                            }
+                            .omni_inputContainer {
+                                margin-top: 10px;
+                            }
+                            .omni_inputContainer input {
+                                width: 100% !important;
+                            }
+                            .omni_buttonSubmit {
+                                width: 100% !important;
+                                font-size: 14px !important;
+                            }
+                            button.omni_buttonExit {
+                                margin: 10px 0 0;
+                            }
+                        }
+                    </style>
+                    <!--  Thank You page template  -->
+                    <div data-lc-role="thank_you_template" style="display:none; padding: 100px;">
+                        <!--  Text 3    -->
+                        <div data-tpl-role="text" data-tpl-name="Text Bottom" style="        display: inline-block;        width: 100%;        position: relative;        text-align: center;"
+                            class="">
+                            <div style="          display: inline-block;          width: 100%;          margin-bottom: 20px;          font-family: 'Montserrat', sans-serif;          font-size: 24px;          font-weight: normal;          line-height: 1;          color: #212121;        ">Thank you</div>
+                        </div>
+                        <!-- Button  -->
+                        <button class="omni_buttonSubmit" data-lc-role="thankyou_submit" data-tpl-role="lc-ty-button" data-tpl-name="TY Submit" type="button"
+                            style="                  margin: 20px auto 0;                  background: #fb6163;              ">GREAT</button>
+                    </div>
+                </div>
+            </div>
+        </mktz-div>
+        <mktz-div id="mktz_outer" style="width: 100%; height: 100%; left: 0px; top: 0px; background: rgb(0, 0, 0); position: fixed; z-index: 24111988; opacity: 0.7;"></mktz-div>
+        
+    
+
+    </div>
+    
+    
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/jqueryscript.js"></script>
+</body>
+
+</html>
