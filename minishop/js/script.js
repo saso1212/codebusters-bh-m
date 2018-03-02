@@ -107,61 +107,61 @@ minus.addEventListener('click', function () {
     }
 
 });
-let clickCount = 0;
-addToCart.addEventListener("click", function () {
-    debugger;
-    clickCount++;
-    let title = productTitle.innerText;
-    let totalPrice;
-    let quantity;
-    if (count == 0) {
-        quantity = 1;
-        totalPrice = parseFloat(productPrice.innerText);
-    }
-    else {
-        quantity = count;
-        totalPrice = result;
-    }
-    let shopObj={
-        title:title,
-        totalPrice:totalPrice,
-        quantity:quantity
-    }
-    let itemsArray= localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')) : [];
-    itemsArray.push(shopObj);
-    localStorage.setItem('items', JSON.stringify(itemsArray));
-    // localStorage.setItem("Produkt" + clickCount, `${title}  ${totalPrice.toFixed(2)} ${quantity}`);
-    close();
-    let priceBox=$('.box2');
-    priceBox.html("");
-    let totalPriceForAll=0;
+// let clickCount = 0;
+// addToCart.addEventListener("click", function () {
+//     debugger;
+//     clickCount++;
+//     let title = productTitle.innerText;
+//     let totalPrice;
+//     let quantity;
+//     if (count == 0) {
+//         quantity = 1;
+//         totalPrice = parseFloat(productPrice.innerText);
+//     }
+//     else {
+//         quantity = count;
+//         totalPrice = result;
+//     }
+//     let shopObj={
+//         title:title,
+//         totalPrice:totalPrice,
+//         quantity:quantity
+//     }
+    // let itemsArray= localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')) : [];
+    // itemsArray.push(shopObj);
+    // localStorage.setItem('items', JSON.stringify(itemsArray));
+    // close();
+    // let priceBox=$('.box2');
+    // priceBox.html("");
+    // let totalPriceForAll=0;
     // $.each(itemsArray,function( key,element){
     //     debugger;
        
-        // let priceItems=`<h3 class="description"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, laboriosam.</h3>
-        // <br>
-        // <p  style="padding:8px;"><span class="price">Price: ${element.totalPrice}$</span> <span class="quantity">Quanitity:${element.quantity}</span> </p>`
+    //     let priceItems=`<h3 class="description"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, laboriosam.</h3>
+    //     <br>
+    //     <p  style="padding:8px;"><span class="price">Price: ${element.totalPrice}$</span> <span class="quantity">Quanitity:${element.quantity}</span> </p>`
     //     priceBox.append(priceItems);
     //     totalPriceForAll+=parseFloat((element.totalPrice).toFixed(2));
     // })
-    function slideItems(n = 0){
-        if(n > itemsArray.length){
-            return;
-        }
-        let priceItems=`<h3 class="description"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, laboriosam.</h3>
-        <br>
-        <p  style="padding:8px;"><span class="price">Price: ${itemsArray[n].totalPrice}$</span> <span class="quantity">Quanitity:${itemsArray[n].quantity}</span> </p>`
-        priceBox.append(priceItems).effect("slide", {direction: "right"}, 400, () => {
-            return slideItems(n + 1);
-        });
-        slideItems();
+    // // function slideItems(n = 0){
+    // //     if(n > itemsArray.length){
+    // //         return;
+    // //     }
+    // //     let priceItems=`<h3 class="description"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, laboriosam.</h3>
+    // //     <br>
+    // //     <p  style="padding:8px;"><span class="price">Price: ${itemsArray[n].totalPrice}$</span> <span class="quantity">Quanitity:${itemsArray[n].quantity}</span> </p>`
+    // //     priceBox.append(priceItems).effect("slide", {direction: "right"}, 400, () => {
+    // //         return slideItems(n + 1);
+    // //     });
+    // //     slideItems();
         
-    };
-    $('#total-price').html("");
-    let total=` <p style="padding-left:10px;">Total Price: <span id="totoal-price"> ${totalPriceForAll}$ </span></p>`
-    $('#total-price').append(total);
+    // // };
+    // $('#total-price').html("");
+    // let total=` <p style="padding-left:10px;">Total Price: <span id="totoal-price"> ${totalPriceForAll}$ </span></p>`
+    // $('#total-price').append(total);
+    // close();
     
-});
+// });
 
 closeButton.addEventListener("click", function () {
     close();

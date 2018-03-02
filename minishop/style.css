@@ -102,6 +102,7 @@
     float: right;
     border-radius: 5px;
     padding: 5px;
+  
     
 }
 .box-title{
@@ -113,11 +114,11 @@
 .container-box{
     width: 100%;
 }
-.btn{
-    padding: 5px 10px;
-    margin-left: 180px;
-}
 
+.purchaseTitle{
+    padding-left: 10px;
+    font-size: 20px;
+}
 .btn-close{
     border: none;
     background-color: #444;
@@ -131,11 +132,88 @@
     margin-left: 10px;
     padding: 10px 0px;
 }
-
+.box2{
+    padding: 10px 0px;
+}
+.itemsboxprice{
+    border-bottom:  1px dotted #fff;
+   
+}
 .quantity{
-    padding-left: 200px;
+    padding-left: 185px;
 }
 
 #totoal-price{
-    margin-left: 250px;
+    margin-left: 200px;
+    margin-bottom: 10px;
+}
+#purche{
+    background: linear-gradient(rgb(110, 104, 104),#212121);
+    border: none;
+    border-radius: 2px;
+    color: #fff;
+    padding: 10px 10px;
+    margin-bottom: 7px;
+    margin-left: 130px;
+}
+#purche:hover{
+    background: linear-gradient(#212121,rgb(110, 104, 104));
+   
+}
+.btn-back{
+    background: #FFF;
+	color: gray;
+	font: bold 11px "Helvetica";
+	padding: 12px;
+    text-decoration: none;
+    font-size: 16px;
+    float:right;
+    border: none;
+    display: none;
+
+	-webkit-border-top-left-radius: 20px;
+	-moz-border-top-left-radius: 20px;
+    border-top-left-radius: 20px;
+    -webkit-border-bottom-left-radius: 20px;
+	-moz-border-bottom-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    margin-top:100px;
+   
+
+	-webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, .25);
+	-moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, .25);
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, .25);
+	
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+.btn-back:after{
+    background: gray;
+	color: #FFF;
+	content: "<";
+	display: inline-block;
+	font: bold 11px "Georgia";
+    height: 25px;
+    font-size:15px;
+	line-height: 25px;
+	margin-left: 10px;
+	text-align: center;
+	width: 25px;
+	
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+
+}
+.btn-back:hover{
+    -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 1);
+	-moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 1);
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 1);
+
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
 }
